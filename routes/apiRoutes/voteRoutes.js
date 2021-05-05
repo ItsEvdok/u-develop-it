@@ -27,7 +27,7 @@ router.post("/vote", ({ body }, res) => {
   });
 });
 
-//Get all voters
+//Get all votes in descending order
 router.get("/votes", (req, res) => {
   const sql = `SELECT candidates.*, parties.name AS party_name, COUNT(candidate_id) AS count
   FROM votes
